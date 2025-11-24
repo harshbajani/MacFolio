@@ -110,19 +110,27 @@ const techStack = [
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS", "GSAP", "Framer-motion"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express", "Hono"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "PostgreSQL", "Redis"],
   },
   {
     category: "Dev Tools",
     items: ["Git", "GitHub", "Docker"],
+  },
+  {
+    category: "Cloud Tools",
+    items: ["AWS"],
+  },
+  {
+    category: "3D",
+    items: ["Threejs", "React-fiber"],
   },
 ];
 
