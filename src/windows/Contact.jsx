@@ -12,9 +12,9 @@ const Contact = () => {
       </div>
       <div className="p-5 space-y-5">
         <img
-          src="/images/adrian.jpg"
+          src="/images/harsh.jpg"
           alt="harsh"
-          className="w-20 rounded-full"
+          className="w-20 h-20 rounded-full object-cover"
         />
         <h3>Let's Connect</h3>
         <p>Got an idea? A bug to squash? or just wanna talk tech? I'm in.</p>
