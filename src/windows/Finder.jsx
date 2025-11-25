@@ -18,9 +18,12 @@ const Finder = () => {
       return window.open(item.href, "_blank");
 
     // Use the correct window key based on file type
-    const windowKey = item.fileType === 'txt' ? 'txtfile' :
-      item.fileType === 'img' ? 'imgfile' :
-        `${item.fileType}${item.kind}`;
+    const windowKey =
+      item.fileType === "txt"
+        ? "txtfile"
+        : item.fileType === "img"
+        ? "imgfile"
+        : `${item.fileType}${item.kind}`;
     openWindow(windowKey, item);
   };
 

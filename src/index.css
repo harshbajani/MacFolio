@@ -61,9 +61,56 @@ body {
   }
 }
 
+/* Dark-mode overrides for window backgrounds (placed at end for highest priority) */
+html.dark #safari,
+html.dark #terminal,
+html.dark #contact,
+html.dark #photos,
+html.dark #resume,
+html.dark #finder,
+html.dark #txtfile,
+html.dark #imgfile {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Finder content panel background in dark mode */
+html.dark #finder .content {
+  @apply bg-gray-900 text-gray-100;
+}
+
 @layer components {
   .icon {
     @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+  }
+
+  .window {
+    @apply bg-white text-gray-900;
+  }
+
+  html.dark .window {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  html.dark #window-header {
+    @apply bg-gray-800 border-gray-700 text-gray-300;
+  }
+
+  html.dark #window-controls .close {
+    @apply bg-red-500;
+  }
+
+  html.dark #window-controls .minimize {
+    @apply bg-yellow-400;
+  }
+
+  html.dark #window-controls .maximize {
+    @apply bg-green-500;
+  }
+
+  html.dark #finder .sidebar,
+  html.dark #photos .sidebar,
+  html.dark #terminal .sidebar {
+    @apply bg-gray-900 border-gray-800 text-white;
   }
 
   #welcome {
@@ -307,7 +354,7 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl bg-white;
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
@@ -393,4 +440,19 @@ body {
       }
     }
   }
+}
+
+
+html.dark #finder .sidebar h3 {
+  @apply text-xs font-medium text-gray-400;
+}
+
+/* Active sidebar item in dark mode */
+html.dark #finder .sidebar .active {
+  @apply bg-blue-500 text-white;
+}
+
+/* Inactive items in dark mode */
+html.dark #finder .sidebar .not-active {
+  @apply text-gray-300 hover:bg-gray-800;
 }

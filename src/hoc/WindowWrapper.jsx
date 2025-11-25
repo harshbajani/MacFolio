@@ -41,14 +41,18 @@ const WindowWrapper = (Component, windowKey) => {
     }, [isOpen]);
 
     return (
-      <section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
+      <section
+        id={windowKey}
+        ref={ref}
+        style={{ zIndex }}
+        className="window absolute rounded-lg shadow-lg overflow-hidden transition-colors duration-200"
+      >
         <Component {...props} />
       </section>
     );
   };
-  Wrapped.displayName = `WindowWrapper(${
-    Component.displayName || Component.name || "Component"
-  })`;
+  Wrapped.displayName = `WindowWrapper(${Component.displayName || Component.name || "Component"
+    })`;
   return Wrapped;
 };
 
